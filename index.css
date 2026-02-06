@@ -1,1 +1,220 @@
-Add file
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+   --primary: #3e2a17;
+   --dark: #222;
+   --light: #745438;
+   --gray: #1b1818;
+   --bg:#7e6e5c;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+}
+
+/* ================= NAVBAR ================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--light);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  position: relative;
+}
+
+.nav-links a.active {
+  color: var(--primary);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  left: 0;
+  bottom: -5px;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 100px 10%;
+  min-height: 100vh;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.alt {
+  background: #ffffff;
+}
+
+/* ================= HOME ================= */
+.home-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.home-img img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.home-content h1 span {
+  color: var(--primary);
+}
+
+.home-content h2 {
+  margin: 10px 0;
+}
+
+.home-content p {
+  margin: 20px 0;
+  color: var(--gray);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+/* ================= SERVICES ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* ================= EDUCATION ================= */
+.single-box {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-left: 5px solid var(--primary);
+}
+
+/* ================= EXPERIENCE ================= */
+.experience-list {
+  max-width: 800px;
+  margin: auto;
+}
+
+.experience-box {
+  background: #7e6e5c;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+/* ================= CONTACT ================= */
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.section.alt{
+  background-color:#7e6e5c ;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
